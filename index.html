@@ -984,8 +984,6 @@ function gameReducer(state, action) {
     }
     default: return state;
   }
-  </script>
-  <script type="text/babel" data-presets="react">
 }
 // ── LOOT HELPER ───────────────────────────────────────────────────────────────
 function giveLoot(state, playerIdx) {
@@ -1050,6 +1048,8 @@ function buildDesc(card) {
   if (card.trash) parts.push("🗑" + card.trash);
   return parts.join(" · ") || "geen effect";
 }
+  </script>
+  <script type="text/babel" data-presets="react">
 // ── BOARD COMPONENT ───────────────────────────────────────────────────────────
 function GameBoard({ state, dispatch }) {
   const player = state.players[state.cur];
@@ -1838,8 +1838,6 @@ const CAMPAIGN_CHAPTERS = [
         isBoss: true,
       },
     ],
-  </script>
-  <script type="text/babel" data-presets="react">
   },
   {
     id: 2,
@@ -2417,9 +2415,9 @@ function ShopScreen({ progress, shopCards, onBuy, onDone }) {
     </div>
   );
 }
-// ── MAIN APP ──────────────────────────────────────────────────────────────────
   </script>
   <script type="text/babel" data-presets="react">
+// ── MAIN APP ──────────────────────────────────────────────────────────────────
 // ── GAME SCREEN COMPONENT ─────────────────────────────────────────────────────
 function GameScreen({ state, dispatch, player, isAITurn, hasMv, treasures,
   phaseColors, phaseLabels, panel, sectionTitle, btn,
@@ -3233,6 +3231,8 @@ function GameScreen({ state, dispatch, player, isAITurn, hasMv, treasures,
     </div>
   );
 }
+  </script>
+  <script type="text/babel" data-presets="react">
 function App() {
   const [gameMode, setGameMode] = useState(null);
   const [difficulty, setDifficulty] = useState("medium");
